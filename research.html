@@ -5,51 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research — Jungmin Shin</title>
   <link rel="stylesheet" href="style.css">
+  <!-- You can adjust fonts/colors in style.css -->
 </head>
 <body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container sitebar">
+      <div class="sitebrand"><a href="index.html" style="text-decoration:none; color:inherit">Jungmin Shin</a></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <div class="container sitebar">
-    <div class="sitebrand"><a href="index.html" style="text-decoration:none; color:inherit">Jungmin Shin</a></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="cv.html">CV</a>
-    </nav>
-  </div>
-</header>
+  <main>
+    <div class="container">
+      <h1>Research</h1>
+      <p class="lede">
+        Selected publications and works in progress. For a complete list, see my 
+        <a href="https://drive.google.com/file/d/1d6w8mR-hgMCiMd6QankQ6OKd1yvdyXqs/view" target="_blank" rel="noopener">CV</a>.
+      </p>
 
-<main>
-  <div class="container">
-    <h1>Research</h1>
-    <p class="lede">Selected publications and works in progress. For a complete list, see my <a href="https://drive.google.com/file/d/1d6w8mR-hgMCiMd6QankQ6OKd1yvdyXqs/view" target="_blank" rel="noopener">CV</a>.</p>
-    <h2>Papers & Projects</h2>
-    <ul class="clean">
-      <li>
-        <div class="pubtitle"><a href="#" target="_blank" rel="noopener">Who Benefits from Paid Family Leave? Effects on Unpaid Work</a></div>
-        <div class="pubmeta">with Kimberly Gan · under review (2025) · ATUS 2011–2023 · OLS</div>
-        <div>We estimate how state-level paid family leave policies shape childcare and housework time.</div>
-        <div><a href="#">Preprint</a> · <a href="#">Slides</a> · <a href="#">Replication</a></div>
-      </li>
-      <li>
-        <div class="pubtitle"><a href="#" target="_blank" rel="noopener">Mapping Belief Structure Change Through Deliberation</a></div>
-        <div class="pubmeta">R&R, Sociological Perspectives (2025) · Correlational Class Analysis</div>
-        <div>We track how belief structures about nuclear energy shift during public deliberation.</div>
-        <div><a href="#">Manuscript</a> · <a href="#">Data</a></div>
-      </li>
-      <li>
-        <div class="pubtitle"><a href="#" target="_blank" rel="noopener">Occupational Composition and Health Inequality</a></div>
-        <div class="pubmeta">Dissertation project · three-paper format</div>
-        <div>How gender and racial/ethnic compositional change in occupations affects inequalities in work, health, and family outcomes.</div>
-      </li>
-    </ul>
-  </div>
-</main>
+      <!-- ========== Publications & Under Review ========== -->
+      <h2>Publications &amp; Under Review</h2>
+      <ul class="clean">
+        <!-- Paid Family Leave paper -->
+        <li>
+          <!-- Replace # with your preprint or journal link when available -->
+          <div class="pubtitle">
+            <a href="#" target="_blank" rel="noopener">
+              Who Benefits from Paid Family Leave? Effects of State‑Level Paid Family Leave Policy on Unpaid Work
+            </a>
+          </div>
+          <div class="pubmeta">
+            with Kimberly Gan · Under review (2025) · ATUS 2011–2023 · OLS
+          </div>
+          <div>
+            Estimates how state‑level paid family leave policies shape childcare and housework time.
+          </div>
+          <div>
+            <!-- Add your actual links as they are ready -->
+            <a href="#">Preprint</a> · <a href="#">Slides</a> · <a href="#">Replication</a>
+          </div>
+        </li>
+      </ul>
 
-<footer>
-  <div class="container">© <span id="y"></span> Jungmin Shin</div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+      <!-- ========== Dissertation ========== -->
+      <h2>Dissertation</h2>
+      <ul class="clean">
+        <li>
+          <div class="pubtitle">Occupational Composition and Health Inequality</div>
+          <div class="pubmeta">Dissertation project · three‑paper format</div>
+          <div>
+            Examines how gender and racial/ethnic compositional change in occupations affects inequalities in work
+            conditions, health, and family outcomes over time.
+          </div>
+          <!-- Optional: add chapter/preprint links as they become available -->
+          <!-- <div><a href="#">Chapter 1</a> · <a href="#">Chapter 2</a> · <a href="#">Chapter 3</a></div> -->
+        </li>
+      </ul>
 
+      <!-- ========== Works in Progress (edit freely) ========== -->
+      <h2>Works in Progress</h2>
+      <ul class="clean">
+        <li>
+          <div class="pubtitle"><a href="#" target="_blank" rel="noopener">[Title TBD]</a></div>
+          <div class="pubmeta">Work &amp; family · occupational segregation · quantitative methods</div>
+          <div>Short, 1–2 sentence description of the project focus and contribution.</div>
+        </li>
+        <li>
+          <div class="pubtitle"><a href="#" target="_blank" rel="noopener">[Title TBD]</a></div>
+          <div class="pubmeta">Labor‑market precarity · administrative data</div>
+          <div>Short, 1–2 sentence description of the project focus and contribution.</div>
+        </li>
+      </ul>
+
+      <!-- Tip: To add another project, copy a <li> block above and edit the text/links. -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Jungmin Shin</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
-</html]
+</html>
