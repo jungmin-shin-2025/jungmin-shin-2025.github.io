@@ -1,1 +1,50 @@
-<CSS CONTENT FROM ABOVE>
+
+:root{
+  --bg:#ffffff;
+  --fg:#111111;
+  --muted:#4b5563;
+  --link:#0f766e;
+  --link-visited:#115e59;
+  --maxw:760px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0b0b;
+    --fg:#e7e7e7;
+    --muted:#b5b9c0;
+    --link:#5dd3c4;
+    --link-visited:#8de8de;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+body{font:17px/1.7 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+h1,h2,h3{font-family: Georgia, 'Times New Roman', Times, serif; font-weight: 700; letter-spacing:.1px}
+h1{font-size:clamp(28px,4.5vw,40px);line-height:1.2;margin:0 0 6px}
+h2{font-size:clamp(22px,3.3vw,28px);line-height:1.25;margin:36px 0 8px}
+h3{font-size:18px;margin:28px 0 4px}
+p{margin:0 0 14px}
+a{color:var(--link); text-decoration: underline; text-underline-offset:3px}
+a:visited{color:var(--link-visited)}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid rgba(0,0,0,.06); position:sticky;top:0;background:color-mix(in oklab,var(--bg) 92%, transparent); backdrop-filter: blur(6px);}
+.sitebar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.sitebrand{font-family: Georgia, 'Times New Roman', Times, serif; font-weight:700; font-size:18px}
+nav a{margin-left:16px; padding:6px 0}
+nav a:hover{opacity:.75}
+main{padding:28px 0 48px}
+footer{border-top:1px solid rgba(0,0,0,.06); color:var(--muted); font-size:14px; padding:18px 0 42px}
+.lede{color:var(--muted)}
+ul.clean{list-style: none; padding:0; margin: 8px 0 0}
+ul.clean li{margin: 10px 0}
+.pubtitle{font-weight:600}
+.pubmeta{color:var(--muted); font-size:14px}
+.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 0}
+.btn{display:inline-block; border:1px solid rgba(0,0,0,.12); padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:600}
+.btn.primary{background:#0f766e; color:white; border-color:#0a5f59}
+.btn:hover{transform:translateY(-1px)}
+.callout{background:rgba(15,118,110,.06); border:1px solid rgba(15,118,110,.18); padding:12px 14px; border-radius:12px}
+img{max-width:100%; height:auto; border-radius:10px}
+@media (max-width:700px){
+  nav{font-size:15px}
+}

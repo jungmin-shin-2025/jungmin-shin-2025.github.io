@@ -3,62 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV — First Last</title>
+  <title>CV — Jungmin Shin</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-  <nav class="nav">
-    <div class="brand">
-      <img class="avatar" src="headshot.jpg" alt="Headshot of First Last" />
-      <div>
-        <div class="name">First Last</div>
-        <div class="meta">Sociology • Work, Family, Health & Inequality</div>
-      </div>
-    </div>
-    <div class="menu" aria-label="Primary">
-      <a href="index.html">Home</a>
+  <div class="container sitebar">
+    <div class="sitebrand"><a href="index.html" style="text-decoration:none; color:inherit">Jungmin Shin</a></div>
+    <nav>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
       <a href="cv.html">CV</a>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
-<main class="wrap">
-  <section>
-    <h2>CV (selected)</h2>
+
+<main>
+  <div class="container">
+    <h1>CV</h1>
     <p class="lede">Full CV available as <a href="cv.pdf" target="_blank" rel="noopener">PDF</a>.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Education</h3>
-        <div class="timeline">
-          <div class="titem"><strong>Ph.D., Sociology</strong>, University at Albany, SUNY — 2026 (exp.)</div>
-          <div class="titem"><strong>M.A., Sociology</strong>, University at Albany, SUNY — 2021</div>
-          <div class="titem"><strong>B.A., Sociology</strong>, Your Undergrad — 2016</div>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Appointments & Teaching</h3>
-        <div class="timeline">
-          <div class="titem"><strong>Instructor</strong>, ASOC221 Statistics for Sociologists — Summer 2025</div>
-          <div class="titem"><strong>Instructor</strong>, Intro to Sociology — Fall 2024</div>
-          <div class="titem"><strong>Instructor</strong>, Research Methods — 2023–2024</div>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Awards & Grants</h3>
-        <ul>
-          <li>Center for Social and Demographic Analysis small grant, 2024</li>
-          <li>Best Student Paper Award, Your Association, 2023</li>
-        </ul>
-      </div>
-    </div>
-    <p class="lede">References available upon request: Jonathan Dirlam, Scott South, Zoya Gubernskaya / Kate Strully.</p>
-  </section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Ph.D., Sociology</strong>, University at Albany, SUNY — 2026 (exp.)</li>
+      <li><strong>M.A., Sociology</strong>, University at Albany, SUNY — 2021</li>
+      <li><strong>B.A., Sociology</strong>, Your Undergrad — 2016</li>
+    </ul>
+    <h2>Appointments & Teaching</h2>
+    <ul>
+      <li>Instructor, ASOC221 Statistics for Sociologists — Summer 2025</li>
+      <li>Instructor, Intro to Sociology — Fall 2024</li>
+      <li>Instructor, Research Methods — 2023–2024</li>
+    </ul>
+    <h2>Awards & Grants</h2>
+    <ul>
+      <li>Center for Social and Demographic Analysis small grant, 2024</li>
+      <li>Best Student Paper Award, Your Association, 2023</li>
+    </ul>
+  </div>
 </main>
-<footer class="wrap">
-  © <span id="y"></span> First Last · Built with GitHub Pages
+
+<footer>
+  <div class="container">© <span id="y"></span> Jungmin Shin</div>
 </footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
