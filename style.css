@@ -1,93 +1,46 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
-/* Global Styles */
-body {
-  font-family: 'Lato', Arial, sans-serif;
-  background-color: #1e1e1e; /* Dark gray background */
-  color: #f5f5f5;
-  margin: 0;
-  line-height: 1.6;
+:root{
+  --bg:#1e1e1e; /* Dark gray background */
+  --fg:#e7e7e7;
+  --muted:#b5b9c0;
+  --link:#5dd3c4;
+  --link-visited:#8de8de;
+  --maxw:760px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Navigation Bar */
-header {
-  background-color: #1e1e1e;
-  padding: 1rem 0;
-  border-bottom: 1px solid #333;
-}
-
-.sitebar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sitebrand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
-  color: #f5f5f5;
-}
-
-nav a {
-  color: #f5f5f5;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-
-nav a:hover {
-  color: #556b2f; /* Ivy green */
-}
-
-/* Headings */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #556b2f; /* Ivy green */
-  margin-top: 1.5rem;
-}
-
-h1 {
-  font-size: 2.2rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-/* Links */
-a {
-  color: #556b2f; /* Ivy green */
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #333;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-.clean {
-  list-style: none;
-  padding-left: 0;
-}
-
-.clean li {
-  margin-bottom: 1rem;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+body{font:17px/1.7 'Source Sans Pro',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+h1,h2,h3{font-family:'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-weight:700; letter-spacing:.1px}
+/* Subpage titles (Research, CV) are h1; keep them larger */
+h1{font-size:clamp(38px, 6.4vw, 58px);line-height:1.2;margin:0 0 6px}
+/* Homepage name: slightly smaller than subpage h1 */
+.home-title{font-size:clamp(36px, 6vw, 54px)}
+h2{font-size:clamp(22px,3.3vw,28px);line-height:1.25;margin:36px 0 8px}
+h3{font-size:18px;margin:28px 0 4px}
+p{margin:0 0 14px}
+a{color:var(--link); text-decoration: underline; text-underline-offset:3px}
+a:visited{color:var(--link-visited)}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid rgba(0,0,0,.06); position:sticky;top:0;background:color-mix(in oklab,var(--bg) 92%, transparent); backdrop-filter: blur(6px);}
+.sitebar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.sitebrand{font-family:'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-weight:700; font-size:20px}
+nav a{margin-left:16px; padding:6px 0; font-weight:600}
+nav a:hover{opacity:.8}
+main{padding:28px 0 48px}
+footer{border-top:1px solid rgba(0,0,0,.06); color:var(--muted); font-size:14px; padding:18px 0 42px}
+.lede{color:var(--muted)}
+ul.clean{list-style:none; padding:0; margin:8px 0 0}
+ul.clean li{margin:10px 0}
+.pubtitle{font-weight:700}
+.pubmeta{color:var(--muted); font-size:14px}
+.btnrow{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 0}
+.btn{display:inline-block; border:1px solid rgba(0,0,0,.12); padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:700}
+.btn.primary{background:#0f766e; color:white; border-color:#0a5f59}
+.btn:hover{transform:translateY(-1px)}
+img{max-width:100%; height:auto; border-radius:10px}
+@media (max-width:700px){
+  nav{font-size:15px}
 }
