@@ -1,20 +1,22 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 :root{
-  --bg:#1e1e1e; /* Always dark gray */
+  --bg:#1e1e1e; /* Dark gray background */
   --fg:#e7e7e7;
   --muted:#b5b9c0;
-  --link:#556b2f; /* Ivy green */
-  --link-visited:#6b8f3f;
+  --link:#5dd3c4;
+  --link-visited:#8de8de;
   --maxw:760px;
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
-body{font:17px/1.7 'Lato',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+body{font:17px/1.7 'Source Sans Pro',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
 h1,h2,h3{font-family:'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-weight:700; letter-spacing:.1px}
+/* Subpage titles (Research, CV) are h1; keep them larger */
 h1{font-size:clamp(38px, 6.4vw, 58px);line-height:1.2;margin:0 0 6px}
+/* Homepage name: slightly smaller than subpage h1 */
 .home-title{font-size:clamp(36px, 6vw, 54px)}
 h2{font-size:clamp(22px,3.3vw,28px);line-height:1.25;margin:36px 0 8px}
 h3{font-size:18px;margin:28px 0 4px}
