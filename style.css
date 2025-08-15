@@ -1,13 +1,15 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
 /* Global Styles */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   background-color: #1e1e1e; /* Dark gray background */
-  color: #f5f5f5; /* Light text for contrast */
+  color: #f5f5f5;
   margin: 0;
   line-height: 1.6;
 }
 
-/* Container */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -16,7 +18,7 @@ body {
 
 /* Navigation Bar */
 header {
-  background-color: #1e1e1e; /* Match background */
+  background-color: #1e1e1e;
   padding: 1rem 0;
   border-bottom: 1px solid #333;
 }
@@ -28,8 +30,9 @@ header {
 }
 
 .sitebrand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'Playfair Display', serif;
   color: #f5f5f5;
 }
 
@@ -45,6 +48,7 @@ nav a:hover {
 
 /* Headings */
 h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
   color: #3b5f41; /* Ivy green */
   margin-top: 1.5rem;
 }
