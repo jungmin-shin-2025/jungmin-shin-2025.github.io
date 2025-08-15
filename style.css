@@ -43,13 +43,13 @@ nav a {
 }
 
 nav a:hover {
-  color: #3b5f41; /* Ivy green */
+  color: #556b2f; /* Ivy green */
 }
 
 /* Headings */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #3b5f41; /* Ivy green */
+  color: #556b2f; /* Ivy green */
   margin-top: 1.5rem;
 }
 
@@ -67,7 +67,7 @@ h3 {
 
 /* Links */
 a {
-  color: #3b5f41; /* Ivy green */
+  color: #556b2f; /* Ivy green */
 }
 
 a:hover {
