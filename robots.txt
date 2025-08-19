@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jungmin-shin-2025.github.io/sitemap.xml
