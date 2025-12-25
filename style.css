@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 :root{
-  --bg:#1e1e1e; /* Dark gray background */
+  --bg: #fff7fb;
   --fg:#e7e7e7;
   --muted:#b5b9c0;
   --link:#5dd3c4;
