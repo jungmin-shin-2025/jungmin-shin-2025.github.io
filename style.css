@@ -83,7 +83,7 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .hero-grid{
   display: grid;
-  grid-template-columns: 520px 1fr; /* bigger photo column */
+  grid-template-columns: 640px 1fr; /* bigger photo column */
   gap: 56px;
   align-items: start;
 }
@@ -95,8 +95,6 @@ img{max-width:100%; height:auto; border-radius:10px}
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.12);
   display: block;
 }
 
