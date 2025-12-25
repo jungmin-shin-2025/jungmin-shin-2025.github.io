@@ -66,18 +66,19 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .hero{
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  gap: 32px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 36px;
   align-items: start;
   margin: 6px auto 32px;
   max-width: 980px;
 }
 
 .headshot{
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;   /* keeps it nicely square like the stacked version */
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(0,0,0,.12);
 }
 
