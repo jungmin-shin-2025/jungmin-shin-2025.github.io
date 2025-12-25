@@ -106,8 +106,7 @@ img{max-width:100%; height:auto; border-radius:10px}
   .hero-grid{ grid-template-columns: 1fr; }
 }
 
-/* ===== Header aligned to hero columns ===== */
-
+/* Header aligns to the same width + columns as the homepage hero */
 .header-wrap{
   max-width: 1280px;
   margin: 0 auto;
@@ -116,6 +115,10 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .header-grid{
   display: grid;
-  grid-template-columns: 640px 1fr; /* EXACTLY matches hero */
+  grid-template-columns: 640px 1fr; /* aligns with hero photo/text split */
   align-items: center;
+}
+
+.header-grid nav{
+  justify-self: start; /* keeps nav aligned to start of text column */
 }
