@@ -70,7 +70,8 @@ img{max-width:100%; height:auto; border-radius:10px}
 /* ---------- Header ---------- */
 
 .header-wrap{
-  max-width: 1280px;
+  max-width: var(--maxw); 
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -83,7 +84,10 @@ img{max-width:100%; height:auto; border-radius:10px}
 }
 
 .header-grid nav{
-  justify-self: start;
+  justify-self: stretch;      /* take full width of the right column */
+  display: flex;
+  justify-content: flex-end;  /* push links to the far right */
+  gap: 16px;
 }
 
 /* ---------- Homepage Hero ---------- */
