@@ -64,35 +64,6 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 /* ===== Homepage hero with headshot ===== */
 
-.hero{
-  display: grid;
-  grid-template-columns: 42% 1fr;
-  gap: 40px;
-  align-items: start;
-  margin: 12px auto 36px;
-  max-width: 1100px;
-}
-
-.headshot{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,.12);
-}
-
-.hero-right .home-title{
-  margin-top: 0;
-}
-
-@media (max-width:700px){
-  .hero{ grid-template-columns: 1fr; }
-  .headshot{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-}
 
 /* Widen homepage hero on desktop */
 .hero{
@@ -102,25 +73,23 @@ img{max-width:100%; height:auto; border-radius:10px}
 }
 /* ===== Full-width homepage hero (NO text wrapping) ===== */
 
+/* ===== Full-width homepage hero (photo left, text + About right) ===== */
+
 .hero-wrap{
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto 40px;
   padding: 0 20px;
 }
 
 .hero-grid{
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 48px;
+  grid-template-columns: 520px 1fr; /* bigger photo column */
+  gap: 56px;
   align-items: start;
 }
 
-/* Photo column */
-.hero-photo{
-  width: 100%;
-}
+.hero-photo{ width: 100%; }
 
-/* Image behaves like the big stacked version */
 .headshot{
   width: 100%;
   height: auto;
@@ -131,14 +100,10 @@ img{max-width:100%; height:auto; border-radius:10px}
   display: block;
 }
 
-/* Text column */
 .hero-text{
-  min-width: 0; /* prevents overflow squeezing */
+  min-width: 0;
 }
 
-/* Mobile: stack, still big */
-@media (max-width:800px){
-  .hero-grid{
-    grid-template-columns: 1fr;
-  }
+@media (max-width:900px){
+  .hero-grid{ grid-template-columns: 1fr; }
 }
