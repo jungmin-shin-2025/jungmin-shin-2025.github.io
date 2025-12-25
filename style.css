@@ -8,7 +8,7 @@
   --link: #6b2d5c;          /* warm plum */
   --link-visited: #8b4a79;  /* lighter plum */
   --accent: #6b2d5c;        /* shared accent */
-  --maxw:760px;
+  --maxw:1280px;
 }
 
 *{box-sizing:border-box}
