@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 :root{
-  --bg: #fff7fb;
-  --fg:#e7e7e7;
-  --muted:#b5b9c0;
-  --link:#5dd3c4;
-  --link-visited:#8de8de;
+  --bg: #fff7fb;            /* light pink stays */
+  --fg: #1f2937;            /* readable dark slate */
+  --muted: #6b7280;         /* soft gray */
+  --link: #6b2d5c;          /* warm plum */
+  --link-visited: #8b4a79;  /* lighter plum */
+  --accent: #6b2d5c;        /* shared accent */
   --maxw:760px;
 }
 
@@ -37,9 +38,25 @@ ul.clean li{margin:10px 0}
 .pubtitle{font-weight:700}
 .pubmeta{color:var(--muted); font-size:14px}
 .btnrow{display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 0}
-.btn{display:inline-block; border:1px solid rgba(0,0,0,.12); padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:700}
-.btn.primary{background:#0f766e; color:white; border-color:#0a5f59}
-.btn:hover{transform:translateY(-1px)}
+.btn{
+  display:inline-block;
+  border:1px solid rgba(107,45,92,.35);
+  padding:8px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  color: var(--accent);
+  background: transparent;
+}
+.btn.primary{
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+.btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(0.97);
+}
 img{max-width:100%; height:auto; border-radius:10px}
 @media (max-width:700px){
   nav{font-size:15px}
