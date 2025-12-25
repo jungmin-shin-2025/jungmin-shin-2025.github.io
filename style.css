@@ -63,17 +63,30 @@ img{max-width:100%; height:auto; border-radius:10px}
 }
 
 /* ===== Homepage hero with headshot ===== */
+/* =========================================================
+   FULL-WIDTH LAYOUT (shared by Home + all subpages)
+   ========================================================= */
 
+/* ---------- Header ---------- */
 
-/* Widen homepage hero on desktop */
-.hero{
-  max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
+.header-wrap{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-/* ===== Full-width homepage hero (NO text wrapping) ===== */
 
-/* ===== Full-width homepage hero (photo left, text + About right) ===== */
+.header-grid{
+  display: grid;
+  grid-template-columns: 640px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.header-grid nav{
+  justify-self: start;
+}
+
+/* ---------- Homepage Hero ---------- */
 
 .hero-wrap{
   max-width: 1280px;
@@ -83,12 +96,14 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .hero-grid{
   display: grid;
-  grid-template-columns: 640px 1fr; /* bigger photo column */
+  grid-template-columns: 640px 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center; /* vertical centering of text */
 }
 
-.hero-photo{ width: 100%; }
+.hero-photo{
+  width: 100%;
+}
 
 .headshot{
   width: 100%;
@@ -102,23 +117,14 @@ img{max-width:100%; height:auto; border-radius:10px}
   min-width: 0;
 }
 
+/* ---------- Mobile ---------- */
+
 @media (max-width:900px){
-  .hero-grid{ grid-template-columns: 1fr; }
-}
+  .header-grid{
+    grid-template-columns: 1fr;
+  }
 
-/* Header aligns to the same width + columns as the homepage hero */
-.header-wrap{
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.header-grid{
-  display: grid;
-  grid-template-columns: 640px 1fr; /* aligns with hero photo/text split */
-  align-items: center;
-}
-
-.header-grid nav{
-  justify-self: start; /* keeps nav aligned to start of text column */
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
 }
