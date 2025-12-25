@@ -61,3 +61,35 @@ img{max-width:100%; height:auto; border-radius:10px}
 @media (max-width:700px){
   nav{font-size:15px}
 }
+
+/* ===== Homepage hero with headshot ===== */
+
+.hero{
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 26px;
+  align-items: start;
+  margin: 6px 0 26px;
+}
+
+.headshot{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.hero-right .home-title{
+  margin-top: 0;
+}
+
+@media (max-width:700px){
+  .hero{ grid-template-columns: 1fr; }
+  .headshot{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
