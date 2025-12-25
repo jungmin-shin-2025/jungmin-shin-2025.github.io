@@ -100,3 +100,45 @@ img{max-width:100%; height:auto; border-radius:10px}
   margin-left: auto;
   margin-right: auto;
 }
+/* ===== Full-width homepage hero (NO text wrapping) ===== */
+
+.hero-wrap{
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Photo column */
+.hero-photo{
+  width: 100%;
+}
+
+/* Image behaves like the big stacked version */
+.headshot{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.12);
+  display: block;
+}
+
+/* Text column */
+.hero-text{
+  min-width: 0; /* prevents overflow squeezing */
+}
+
+/* Mobile: stack, still big */
+@media (max-width:800px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+}
