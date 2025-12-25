@@ -66,10 +66,11 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .hero{
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 26px;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 32px;
   align-items: start;
-  margin: 6px 0 26px;
+  margin: 6px auto 32px;
+  max-width: 980px;
 }
 
 .headshot{
@@ -93,3 +94,9 @@ img{max-width:100%; height:auto; border-radius:10px}
   }
 }
 
+/* Widen homepage hero on desktop */
+.hero{
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
