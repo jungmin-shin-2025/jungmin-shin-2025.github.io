@@ -121,29 +121,23 @@ img{max-width:100%; height:auto; border-radius:10px}
   min-width: 0;
 }
 
-/* ---------- Mobile ---------- */
 @media (max-width:900px){
-
-  /* Force single-column layouts */
   .header-grid,
   .hero-grid{
     grid-template-columns: 1fr !important;
   }
 
-  /* Ensure no child element can exceed screen width */
   .header-wrap,
   .hero-wrap{
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Images must never exceed viewport */
   img{
     max-width: 100%;
     height: auto;
   }
 
-  /* Mobile header spacing */
   .sitebrand a{
     font-size: 24px;
     line-height: 1.25;
@@ -152,6 +146,22 @@ img{max-width:100%; height:auto; border-radius:10px}
   .header-wrap{
     padding-top: 16px;
     padding-bottom: 10px;
+  }
+
+  /* ADD THESE */
+  .hero-text{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lede{
+    max-width: 38ch;
+  }
+
+  .topnav{
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
   }
 }
 
