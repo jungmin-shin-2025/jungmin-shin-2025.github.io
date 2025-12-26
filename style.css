@@ -131,6 +131,17 @@ img{max-width:100%; height:auto; border-radius:10px}
   .hero-grid{
     grid-template-columns: 1fr;
   }
+
+  /* Mobile-only nav brand refinement */
+  .sitebrand{
+    font-size: 22px;      /* slightly bigger name */
+    line-height: 1.25;
+  }
+
+  .header-wrap{
+    padding-top: 14px;   /* push header content down */
+    padding-bottom: 6px;
+  }
 }
 
 /* Research abstract dropdown — with text bubble */
