@@ -133,7 +133,8 @@ img{max-width:100%; height:auto; border-radius:10px}
   }
 }
 
-/* Research abstract dropdown */
+/* Research abstract dropdown — with text bubble */
+
 .abstract-toggle{
   margin-top: 6px;
 }
@@ -158,8 +159,13 @@ img{max-width:100%; height:auto; border-radius:10px}
   content: " ▾";
 }
 
+/* THIS is the bubble */
 .abstract-toggle p{
-  margin: 8px 0 0;
-  color: var(--fg);
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
   line-height: 1.65;
+  color: var(--fg);
 }
