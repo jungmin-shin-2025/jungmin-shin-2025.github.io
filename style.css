@@ -160,12 +160,15 @@ img{max-width:100%; height:auto; border-radius:10px}
 }
 
 /* THIS is the bubble */
+/* Research abstract dropdown — clear rounded card */
+
 .abstract-toggle p{
-  margin-top: 10px;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
+  display: block;                 /* force block card */
+  margin: 12px 0 10px;            /* space above + below */
+  padding: 16px 18px;
+  background: #fff2f7;            /* your pink-tinted bubble */
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
   line-height: 1.65;
   color: var(--fg);
 }
