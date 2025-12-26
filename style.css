@@ -162,13 +162,22 @@ img{max-width:100%; height:auto; border-radius:10px}
 /* THIS is the bubble */
 /* Research abstract dropdown — clear rounded card */
 
-.abstract-toggle p{
-  display: block;                 /* force block card */
-  margin: 12px 0 10px;            /* space above + below */
+/* One single bubble that wraps the entire abstract */
+.abstract-card{
+  margin: 12px 0 10px;
   padding: 16px 18px;
-  background: #fff2f7;            /* your pink-tinted bubble */
+  background: #fff2f7;
   border: 1px solid rgba(0,0,0,0.10);
   border-radius: 14px;
+}
+
+/* Paragraph styling inside the bubble */
+.abstract-card p{
+  margin: 0 0 10px;
   line-height: 1.65;
   color: var(--fg);
+}
+
+.abstract-card p:last-child{
+  margin-bottom: 0;
 }
