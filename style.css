@@ -121,28 +121,40 @@ img{max-width:100%; height:auto; border-radius:10px}
   min-width: 0;
 }
 
-/* ===== Mobile: adjust header name only ===== */
+/* ---------- Mobile ---------- */
 @media (max-width:900px){
 
-  /* Give the whole header a bit more breathing room */
-  .header-wrap{
-    padding-top: 18px;
-    padding-bottom: 10px;
+  /* Force single-column layouts */
+  .header-grid,
+  .hero-grid{
+    grid-template-columns: 1fr !important;
   }
 
-  /* Add vertical space between name and nav when stacked */
-  .header-grid{
-    row-gap: 8px;
+  /* Ensure no child element can exceed screen width */
+  .header-wrap,
+  .hero-wrap{
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  /* Make the name larger and not stuck to the corner */
+  /* Images must never exceed viewport */
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Mobile header spacing */
   .sitebrand a{
     font-size: 24px;
     line-height: 1.25;
-    display: inline-block;
-    padding-top: 6px;
+  }
+
+  .header-wrap{
+    padding-top: 16px;
+    padding-bottom: 10px;
   }
 }
+
 
 /* Research abstract dropdown — with text bubble */
 
@@ -191,4 +203,10 @@ img{max-width:100%; height:auto; border-radius:10px}
 
 .abstract-card p:last-child{
   margin-bottom: 0;
+}
+
+/* ===== Prevent horizontal scrolling on mobile ===== */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
 }
