@@ -132,3 +132,34 @@ img{max-width:100%; height:auto; border-radius:10px}
     grid-template-columns: 1fr;
   }
 }
+
+/* Research abstract dropdown */
+.abstract-toggle{
+  margin-top: 6px;
+}
+
+.abstract-toggle summary{
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--accent);
+  list-style: none;
+}
+
+.abstract-toggle summary::-webkit-details-marker{
+  display: none;
+}
+
+.abstract-toggle summary::after{
+  content: " ▸";
+  font-weight: 700;
+}
+
+.abstract-toggle[open] summary::after{
+  content: " ▾";
+}
+
+.abstract-toggle p{
+  margin: 8px 0 0;
+  color: var(--fg);
+  line-height: 1.65;
+}
