@@ -222,16 +222,39 @@ html, body{
 }
 
 /* ===================== */
-/* Student Comment Quotes */
+/* Student comments (abstract-card style) */
 /* ===================== */
 
-blockquote {
-  margin: 1.5rem 0;
-  padding: 0.75rem 1.25rem;
-  border-left: 4px solid #4b6f6a;
-  color: #333;
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
 }
 
-blockquote:not(:last-child) {
-  margin-bottom: 2rem;
+@media (min-width: 850px) {
+  .quote-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+blockquote.quote-card {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fafafa;
+  color: #111;
+  font-style: italic; /* keep text crisp; we can italicize if you want */
+  line-height: 1.5;
+}
+
+/* Optional: subtle quote mark (very similar vibe to abstract toggles/cards) */
+blockquote.quote-card::before {
+  content: "“";
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  color: #cfcfcf;
+  margin-bottom: 0.35rem;
 }
