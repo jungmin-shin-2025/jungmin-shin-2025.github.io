@@ -304,6 +304,7 @@ html, body{
     padding: 4px 0;
     text-align: left !important;
     white-space: normal !important;
+    background: transparent;   /* IMPORTANT: stop white cells */
   }
 
   .course-table td:nth-child(1)::before{ content: "Course: "; font-weight: 700; }
@@ -340,8 +341,9 @@ html, body{
   transition: color 0.15s ease;
 }
 
-.strengths-accordion summary:hover {
-  color: var(--accent);          /* plum on hover */
+
+.strengths-accordion details[open] > summary {
+  color: var(--accent);
 }
 
 .strengths-accordion summary::-webkit-details-marker {
@@ -403,4 +405,31 @@ blockquote.quote-card::before {
   line-height: 1;
   color: #cfcfcf;
   margin-bottom: 0.35rem;
+}
+
+/* ===================== */
+/* Mobile nav: force single row */
+/* ===================== */
+@media (max-width: 900px){
+  .header-grid nav.topnav{
+    flex-wrap: nowrap;          /* no wrapping */
+    justify-content: flex-start;/* pull Home left */
+    gap: 12px;                  /* slightly tighter */
+    overflow-x: auto;           /* if extremely tight screens */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .header-grid nav.topnav a{
+    margin-left: 0;             /* remove desktop margin */
+    flex: 0 0 auto;
+  }
+
+  /* optional: hide scrollbar (still scrollable) */
+  .header-grid nav.topnav::-webkit-scrollbar{
+    display: none;
+  }
+  .header-grid nav.topnav{
+    scrollbar-width: none;
+  }
 }
