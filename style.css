@@ -230,12 +230,6 @@ html, body{
    (Paste at bottom so it overrides earlier rules)
    ========================================================= */
 
-/* 0) If you want lede text black on Teaching only:
-   Add <body class="teaching-page"> in teaching.html */
-body.teaching-page .lede{
-  color: var(--fg);
-}
-
 /* 1) Courses table — clearer dividers + striping + better alignment */
 .course-table{
   width: 100%;
@@ -341,8 +335,21 @@ body.teaching-page .lede{
 }
 
 /* ===================== */
-/* Quote cards — pink background only */
+/* Quote cards — two-column layout, pink background */
 /* ===================== */
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+  margin: 1rem 0 2rem;
+}
+
+@media (min-width: 850px) {
+  .quote-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 blockquote.quote-card {
   margin: 0;
@@ -355,7 +362,7 @@ blockquote.quote-card {
   line-height: 1.5;
 }
 
-/* keep the quote mark */
+/* subtle quote mark (kept from original quote-card design) */
 blockquote.quote-card::before {
   content: "“";
   display: block;
