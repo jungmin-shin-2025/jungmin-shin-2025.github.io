@@ -317,30 +317,50 @@ body.teaching-page .lede{
   .course-table td:nth-child(3)::before{ content: "Terms: "; font-weight: 700; }
 }
 
-/* 2) Pedagogical strengths — keep full text but add separation
-   Wrap your list in <div class="strengths"> ... </div> */
-.strengths ul.clean{
+/* ===================== */
+/* Pedagogical strengths — divider style */
+/* ===================== */
+
+.strengths ul.clean {
   margin-top: 1rem;
 }
 
-.strengths ul.clean li{
-  margin: 0 0 12px 0;
-  padding: 16px 18px;
-  background: #fff2f7; /* match abstract-card */
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 14px;
+.strengths ul.clean li {
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 
-.strengths ul.clean li strong{
+.strengths ul.clean li:last-child {
+  border-bottom: none;
+}
+
+.strengths ul.clean li strong {
   display: inline-block;
-  margin-bottom: 6px;
+  margin-bottom: 0.4rem;
 }
 
-/* 3) Quote cards — override your current quote-card background
-      to match abstract cards exactly (light pink) */
-blockquote.quote-card{
-  background: #fff2f7;                 /* exact match to .abstract-card */
-  border: 1px solid rgba(0,0,0,0.10);  /* match abstract-card border tone */
-  border-radius: 14px;                /* match abstract-card radius */
-  color: var(--fg);                   /* ensure not gray */
+/* ===================== */
+/* Quote cards — pink background only */
+/* ===================== */
+
+blockquote.quote-card {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 12px;
+  background: #fff2f7;   /* SAME pink as abstract-card */
+  color: var(--fg);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* keep the quote mark */
+blockquote.quote-card::before {
+  content: "“";
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  color: #cfcfcf;
+  margin-bottom: 0.35rem;
 }
