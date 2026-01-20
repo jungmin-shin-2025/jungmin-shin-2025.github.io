@@ -298,6 +298,13 @@ html, body{
     margin-bottom: 12px;
     background: #fff2f7; /* match abstract-card */
   }
+  
+  /* CRITICAL SAFARI FIX */
+  .course-table td,
+  .course-table td *,
+  .course-table tr *{
+    background-color: #fff2f7;
+  }
 
   .course-table td{
     border: none;
