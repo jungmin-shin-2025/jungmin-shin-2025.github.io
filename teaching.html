@@ -181,5 +181,23 @@
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
+  <script>
+  // Pedagogical strengths: allow only one open at a time
+  (function () {
+    const wrap = document.querySelector(".strengths-accordion");
+    if (!wrap) return;
+
+    const items = Array.from(wrap.querySelectorAll("details"));
+
+    items.forEach((d) => {
+      d.addEventListener("toggle", () => {
+        if (!d.open) return;
+        items.forEach((other) => {
+          if (other !== d) other.open = false;
+        });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
