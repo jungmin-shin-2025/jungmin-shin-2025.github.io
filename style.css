@@ -278,12 +278,21 @@ html, body{
   text-align: left;
 }
 
-/* Mobile stacking (keeps your earlier approach, but styled like cards) */
+/* Mobile stacking (fix iOS Safari white blocks WITHOUT text highlights) */
 @media (max-width: 700px){
-  .course-table, .course-table thead, .course-table tbody, .course-table th, .course-table td, .course-table tr{
+
+  .course-table,
+  .course-table thead,
+  .course-table tbody,
+  .course-table th,
+  .course-table td,
+  .course-table tr{
     display: block;
   }
-  .course-table thead{ display: none; }
+
+  .course-table thead{
+    display: none;
+  }
 
   .course-table{
     border: none;
@@ -296,14 +305,7 @@ html, body{
     border-radius: 14px;
     padding: 14px 16px;
     margin-bottom: 12px;
-    background: #fff2f7; /* match abstract-card */
-  }
-  
-  /* CRITICAL SAFARI FIX */
-  .course-table td,
-  .course-table td *,
-  .course-table tr *{
-    background-color: #fff2f7;
+    background-color: #fff2f7 !important;  /* force card background */
   }
 
   .course-table td{
@@ -311,12 +313,18 @@ html, body{
     padding: 4px 0;
     text-align: left !important;
     white-space: normal !important;
-    background: #fff2f7;   /* IMPORTANT: stop white cells */
+    background-color: #fff2f7 !important;  /* force cell background */
   }
 
-  .course-table td:nth-child(1)::before{ content: "Course: "; font-weight: 700; }
-  .course-table td:nth-child(2)::before{ content: "Modality: "; font-weight: 700; }
-  .course-table td:nth-child(3)::before{ content: "Terms: "; font-weight: 700; }
+  /* KEY: prevent inner elements from painting their own backgrounds */
+  .course-table td *{
+    background: transparent !important;
+  }
+
+  /* labels */
+  .course-table td:nth-child(1)::before{ content: "Course: "; font-weight: 700; background: transparent !important; }
+  .course-table td:nth-child(2)::before{ content: "Modality: "; font-weight: 700; background: transparent !important; }
+  .course-table td:nth-child(3)::before{ content: "Terms: "; font-weight: 700; background: transparent !important; }
 }
 
 /* ===================== */
