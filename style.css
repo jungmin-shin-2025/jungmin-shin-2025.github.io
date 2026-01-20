@@ -337,6 +337,11 @@ html, body{
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
+  transition: color 0.15s ease;
+}
+
+.strengths-accordion summary:hover {
+  color: var(--accent);          /* plum on hover */
 }
 
 .strengths-accordion summary::-webkit-details-marker {
