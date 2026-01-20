@@ -225,36 +225,122 @@ html, body{
 /* Student comments (abstract-card style) */
 /* ===================== */
 
-.quote-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+/* =========================================================
+   Teaching page polish: table + strengths + quotes
+   (Paste at bottom so it overrides earlier rules)
+   ========================================================= */
+
+/* 0) If you want lede text black on Teaching only:
+   Add <body class="teaching-page"> in teaching.html */
+body.teaching-page .lede{
+  color: var(--fg);
+}
+
+/* 1) Courses table — clearer dividers + striping + better alignment */
+.course-table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 1rem 0 2rem;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff; /* improves contrast on pink page background */
 }
 
-@media (min-width: 850px) {
-  .quote-grid {
-    grid-template-columns: 1fr 1fr;
+.course-table thead th{
+  padding: 14px 16px;
+  font-weight: 700;
+  color: var(--fg);
+  background: #fff2f7; /* exact match to .abstract-card */
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+  text-align: center;
+}
+
+.course-table td{
+  padding: 12px 16px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  color: var(--fg);
+}
+
+.course-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* subtle striping makes rows easier to track */
+.course-table tbody tr:nth-child(even) td{
+  background: rgba(255,255,255,0.65);
+}
+
+/* Alignment: keep Terms readable; center short columns */
+.course-table td:nth-child(1),
+.course-table td:nth-child(2){
+  text-align: center;
+  white-space: nowrap;
+}
+
+.course-table td:nth-child(3){
+  text-align: left;
+}
+
+/* Mobile stacking (keeps your earlier approach, but styled like cards) */
+@media (max-width: 700px){
+  .course-table, .course-table thead, .course-table tbody, .course-table th, .course-table td, .course-table tr{
+    display: block;
   }
+  .course-table thead{ display: none; }
+
+  .course-table{
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .course-table tr{
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: #fff2f7; /* match abstract-card */
+  }
+
+  .course-table td{
+    border: none;
+    padding: 4px 0;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+
+  .course-table td:nth-child(1)::before{ content: "Course: "; font-weight: 700; }
+  .course-table td:nth-child(2)::before{ content: "Modality: "; font-weight: 700; }
+  .course-table td:nth-child(3)::before{ content: "Terms: "; font-weight: 700; }
 }
 
-blockquote.quote-card {
-  margin: 0;
-  padding: 1rem 1.1rem;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  background: #fafafa;
-  color: #111;
-  font-style: italic; /* keep text crisp; we can italicize if you want */
-  line-height: 1.5;
+/* 2) Pedagogical strengths — keep full text but add separation
+   Wrap your list in <div class="strengths"> ... </div> */
+.strengths ul.clean{
+  margin-top: 1rem;
 }
 
-/* Optional: subtle quote mark (very similar vibe to abstract toggles/cards) */
-blockquote.quote-card::before {
-  content: "“";
-  display: block;
-  font-size: 2rem;
-  line-height: 1;
-  color: #cfcfcf;
-  margin-bottom: 0.35rem;
+.strengths ul.clean li{
+  margin: 0 0 12px 0;
+  padding: 16px 18px;
+  background: #fff2f7; /* match abstract-card */
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+}
+
+.strengths ul.clean li strong{
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+/* 3) Quote cards — override your current quote-card background
+      to match abstract cards exactly (light pink) */
+blockquote.quote-card{
+  background: #fff2f7;                 /* exact match to .abstract-card */
+  border: 1px solid rgba(0,0,0,0.10);  /* match abstract-card border tone */
+  border-radius: 14px;                /* match abstract-card radius */
+  color: var(--fg);                   /* ensure not gray */
 }
