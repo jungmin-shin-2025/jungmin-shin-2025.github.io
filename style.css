@@ -357,8 +357,9 @@ html, body{
 
 .strengths-accordion p {
   margin: 0.6rem 0 0;
-  max-width: 90ch;
-  color: var(--fg);
+  max-width: none;     /* remove line-length cap */
+  width: 100%;
+  color: var(--muted); /* muted description */
 }
 
 /* ===================== */
