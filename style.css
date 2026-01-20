@@ -312,26 +312,53 @@ html, body{
 }
 
 /* ===================== */
-/* Pedagogical strengths — divider style */
+/* Pedagogical strengths — accordion style */
 /* ===================== */
 
-.strengths ul.clean {
+.strengths-accordion {
   margin-top: 1rem;
 }
 
-.strengths ul.clean li {
-  margin: 0;
-  padding: 1rem 0;
+.strengths-accordion details {
+  padding: 0.85rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.10);
 }
 
-.strengths ul.clean li:last-child {
-  border-bottom: none;
+.strengths-accordion details:first-child {
+  border-top: 1px solid rgba(0,0,0,0.10);
 }
 
-.strengths ul.clean li strong {
-  display: inline-block;
-  margin-bottom: 0.4rem;
+.strengths-accordion summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--fg);
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.strengths-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* plus / minus indicator */
+.strengths-accordion summary::after {
+  content: "+";
+  font-weight: 700;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.strengths-accordion details[open] summary::after {
+  content: "−";
+}
+
+.strengths-accordion p {
+  margin: 0.6rem 0 0;
+  max-width: 90ch;
+  color: var(--fg);
 }
 
 /* ===================== */
